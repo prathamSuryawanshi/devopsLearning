@@ -1,1 +1,146 @@
 Welcome to devops
+
+Git -> distributed , Economical , speed , snapshots , branching , Integrity , no linear , robustness
+
+--------------------------------------------------------
+
+Git WorkFlow -> 
+				Working Directory -> staging area -> local repository 
+				
+--------------------------------------------------------				
+				
+GITHUB AUTHENTICATION ->
+		
+		•	Password authentication 
+		•	SSH Key authentication 
+		
+--------------------------------------------------------		
+		
+Config :
+
+	git config --list 
+	
+	git config --global user.mail
+	
+	git config --global alias.<alias word>  <command>   -> alias 
+	
+--------------------------------------------------------
+
+Git Initialization : 
+
+	git init   ->   initiate git 
+	
+	git init --bare   -> git init wit bare for sharing 
+	
+	git init --quite  -> It will suppress any unnecessary output
+	
+	git init -b <branchName>   ->  initiate with branchName 
+	
+---------------------------------------------------------
+
+git cloning :
+
+	git clone -> cloning
+	
+	git clone -b <branchName>  -> clone with branchName
+	
+	git clone  --local  "path" -> to clone local repository
+	
+	git clone --mirror <URL>  -> to create a read only copy of repository, not a working directly 
+	
+------------------------------------------------------------
+
+basic snapshoting :
+
+	git status / git status -b -> to check changes in files in working directory
+	
+	git status --short  -> give short info
+
+	git status --show-stash  ->  Shows count of the stashed items
+
+------------------------------------------------------------------
+
+staging area commands :
+
+	git add <filename1>  -> adding particular file 
+	
+	git add -help ->  give add options
+	
+	git add --all  -> add all changes in all directories
+	
+	git add .  -> add all changes in current directory
+	
+	git add --update -> add changes but not add new files
+	
+	git add --patch <filename> -> it will show details which line is added ad which line is removed
+	
+	git commit -m “message”  -> add file with comment 
+	
+	git commit -a -m “commit-message”  -> add without staging area , skip git add command
+	
+	git restore <filename> -> before staging only it will work
+	
+-------------------------------------------------------------------------
+
+Remove a file :
+	
+	git rm <filename>  -> It is used to remove files
+	
+	git rm  -r  <filename>  -> Allow recursive removal when a leading directory name is given
+	
+	git rm  -f  <filename>  ->  Override the up-to-date check or to delete forcefully
+	
+--------------------------------------------------------------------------
+
+Branching :
+
+	git branch -> display branch 
+	
+	git branch -a -> display all branches in repository
+	
+	git branch  <branchname>  ->  create branch 
+	
+	git branch -d  <branchname>   -> delete branch in local 
+	
+	git push origin -–delete branchname   -> delete from origin
+	
+	git branch -m <oldbranchname> <newbranchname>   -> rename BranchName 
+
+	git branch -r  -> list remote branches
+	
+	git checkout branchName  ->  checkout to different branch 
+	
+	git checkout -b <newbranchname>   ->  used to create new branch as well as checkout 
+	
+	git checkout <commitid>  ->   to checkout to particular commit
+	
+----------------------------------------------------------------------------------------------------
+
+Merging : (after merge use 'git push' to push changes to remote)
+
+	git merge <branchname> -> merge to the main branch
+
+	git merge origin/<remotebranchname>  -> merging remote branch to main
+	
+	1) merge local with main  -> 
+		
+		new changes > commit in local > checkout master > git merge 'localRepositoryName'
+		
+	2) Merge remote branch with local branch -> 
+	
+		pull the changes -> add your changes -> commit -> checkout master > git merge 'localRepositoryName'
+		
+	3) merge remote branch with local 
+	
+		git merge origin/<remotebranchname>
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
